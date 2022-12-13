@@ -1,0 +1,84 @@
+<!-- Ebenezer Ofere - 8853665 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pramod - Music App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+<div class="row">
+  <div class="side">
+    <a href="./index.html"><img src="./img/logo-black.png" class="website_logo" alt="website logo"></a>
+    <ul>
+        <li><a href="./music.html">Music</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="#">Podcasts</a></li>
+        <li><a href="#">Favourite Tracks</a></li>
+        <li><a href="#">Playlists</a></li>
+        <li><a href="#">Albums</a></li>
+        <li><a href="#">Artists</a></li>
+        <li><a href="#">Podcasts</a></li>
+      </ul>
+  </div>
+  <div class="main">
+    <div class="innerbox">
+        <h1>Browse all</h1>
+        <div class="mainpagewidget">
+            <div class="genrebox firstbox">
+                <div class="genre green">K-pop</div>
+                <div class="genre orange">Carribean</div>
+                <div class="genre">Punjabi</div>
+                <div class="genre peach">Afrobeats</div>
+            </div>
+            <div class="genrebox">
+                <div class="genre ">Christian</div>
+                <div class="genre blue">Alternative</div>
+                <div class="genre green">Desi</div>
+                <div class="genre shadeblue">Telugu</div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+    <div class="music-container" id="music-container">
+        <div class="music-info">
+          <h4 id="title"></h4>
+          <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+  
+        <audio src="./music/ironman.mp3" id="audio"></audio>
+  
+        <div class="img-container">
+          <img src="./img/ironman.jpg" alt="music-cover" id="cover">
+        </div>
+        <div class="navigation">
+          <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+          </button>
+        </div>
+      </div>
+</div>
+
+
+
+<script src="./js/music.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>

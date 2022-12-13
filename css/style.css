@@ -1,0 +1,253 @@
+/* Ebenezer Ofere - 8853665 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --white:#ffffff;
+    --lightpurple: #7861AA;
+    --darkpurple: #24103D;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.3);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 10%;
+  background-color: var(--darkpurple);
+  padding: 20px;  
+}
+
+.side ul li {
+  letter-spacing: 1px;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 2.5em;
+}
+
+.side ul li a {
+  color: var(--white);
+}
+
+.website_logo {
+  height: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: var(--lightpurple);
+  padding: 20px;
+  color: var(--white);
+}
+
+.main h1 {
+  font-size: 1.5em;
+}
+
+.mainpagewidget {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+
+.btn-trial {
+  cursor: pointer;
+}
+
+.innerbox {
+  margin: 0 40px;
+}
+
+.genrebox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.firstbox {
+  margin-bottom: 2em;
+}
+
+.genre {
+  background-color: #aaa;
+  width: 20%;
+  padding: 20px;
+  height: 200px;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: var(--box-shadow);
+}
+
+.green {
+  background-color: #148A08;
+}
+
+.orange {
+  background-color: #E13300;
+}
+
+.peach {
+  background-color: #E1118C;
+}
+
+.blue {
+  background-color: #0D72EA;
+}
+
+.shadeblue {
+  background-color: #1E3264;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #25133B;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------------- */
+
+.img-container {
+  width: 80px;
+}
+
+.img-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 80px;
+  width: inherit;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.action-btn {
+  /* background-color: #fff; */
+  border: 0;
+  color: #5E5E5E;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 20px;
+}
+
+.action-btn .action-btn-big {
+  color: #5E5E5E;
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-info {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
+  color: var(--white);
+}
+
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}

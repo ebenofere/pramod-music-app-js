@@ -1,0 +1,63 @@
+/* Akash Singh - 8833216 */
+
+:root{
+  --white:#ffffff;
+  --lightpurple: #7861AA;
+  --darkpurple: #24103D;
+  --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.container {
+  width: 600px;
+  background-color: white;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.container ul {
+    margin-left: 40px;
+}
+.container ul li {
+    background-color: var(--lightpurple);
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+.container ul li:hover{
+background-color: var(--darkpurple);
+color: white;
+font-size: 22px;
+}
+
+.select {
+    color: white;
+}
+
+.content {
+    background-color: white;
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: 0 10px 10px;
+    line-height: 1.8;
+    font-size: 1.3rem;
+}
+
+.content p {
+    color: #797979;
+}
+
+.content p:not(:first-of-type){
+    display: none;
+}
+
+.main h1 {
+  margin-left: 2em;
+}
